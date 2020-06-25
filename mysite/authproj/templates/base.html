@@ -10,30 +10,24 @@
     <title>You Got This!</title>
 </head>
 <body>
-    <h1>
-        Thermometer Thing!
-    </h1>
-    <h3>
-        for practice
-    </h3>
+    <div class="header">
+        <h1>
+            Thermometer Thing!
+        </h1>
+        <h3>
+            for practice
+        </h3>
+    </div>
     <div class="links">
-        <div class="link">
-            HOME
-        </div>
-        <div class="link">
-            CREATE ACCOUNT
-        </div>
-        <div class="link">
-            LOGIN
-        </div>
-        <div class="link">
-            lazy admin
+        <a href="#" class="link">HOME</a>
+        <a href="#" class="link">LOGIN</a>
+        <a href="#" class="link">admin</a>
         </div>
     </div>
     {% block content %}
-    <p>
+    <p class="welcome">
         Howdy, please login or make an account!
     </p>
-    {% endblock}
+    {% endblock %}
 </body>
 </html>
