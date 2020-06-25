@@ -133,7 +133,7 @@ STATIC_URL = '/static/'
 REGISTRATION_OPEN = True
 ACCOUNT_ACTIVATION_DAYS = 1
 REGISTRATION_AUTO_LOGIN = True
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/home/'
 LOGIN_URL = '/accounts/login/'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # send emails to term
 

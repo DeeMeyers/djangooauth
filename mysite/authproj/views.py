@@ -4,3 +4,6 @@ from django.http import HttpResponse
 
 def index(request):
     return render(request, 'base.html')
+
+def userpage(request):
+    return render(request, 'core/page1.html')
