@@ -7,10 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="{% static 'js/script.js' %}"></script>
     <link rel="stylesheet" type='text/css' href="{% static 'css/style.css' %}">
-    <title>Document</title>
+    <title>You Got This!</title>
 </head>
 <body>
-    <p class="test">green title</p>
-    test friend
+    <h1>
+        Thermometer Thing!
+    </h1>
+    <h3>
+        for practice
+    </h3>
+    <div class="links">
+        <div class="link">
+            HOME
+        </div>
+        <div class="link">
+            CREATE ACCOUNT
+        </div>
+        <div class="link">
+            LOGIN
+        </div>
+        <div class="link">
+            lazy admin
+        </div>
+    </div>
+    {% block content %}
+    <p>
+        Howdy, please login or make an account!
+    </p>
+    {% endblock}
 </body>
 </html>
