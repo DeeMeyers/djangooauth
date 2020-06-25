@@ -43,6 +43,9 @@ INSTALLED_APPS = [
 
     #mine
     'authproj',
+
+    #third party
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -105,6 +108,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+AUTHENTICATION_BACKENDS = [
+    'social_core.backends.google.GoogleOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
