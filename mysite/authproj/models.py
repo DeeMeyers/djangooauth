@@ -9,3 +9,5 @@ class Goal(models.Model):
     goal = models.IntegerField(blank=True, null=True)
     currentLogin = models.DateTimeField(auto_now_add= True)
     lastLogin = models.DateTimeField(blank=True, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
+    
