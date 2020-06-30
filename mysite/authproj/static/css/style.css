@@ -1,4 +1,33 @@
-.test {
-    color: green;
+/* base.html */
+
+.body{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
 }
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.links{ 
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.link{
+    width: 32%;
+    text-align: center;
+}  
+
+/* shared */
+
+.title{
+    text-align: center;
+}
+
+/* page1.html */
 
