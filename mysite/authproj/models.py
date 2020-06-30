@@ -8,4 +8,4 @@ class Goal(models.Model):
     previous = models.IntegerField(blank=True, null=True)
     goal = models.IntegerField(blank=True, null=True)
     currentLogin = models.DateTimeField(auto_now_add= True)
-    lastLogin = models.DateTimeField()
+    lastLogin = models.DateTimeField(blank=True, null=True)
