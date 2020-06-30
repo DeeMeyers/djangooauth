@@ -1,10 +1,10 @@
+/* base.html */
+
 .body{
     display: flex;
     box-sizing: border-box;
     width: 100%;
 }
-
-
 
 .header{
     display: flex;
@@ -23,6 +23,11 @@
     text-align: center;
 }  
 
+/* shared */
+
 .title{
     text-align: center;
 }
+
+/* page1.html */
+
