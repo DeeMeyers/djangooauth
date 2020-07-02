@@ -3,13 +3,14 @@
 {% block content %}
 
 <h3 class="title">
-    welcome home, cowpoke.
+    Welcome home, cowpoke.
 </h3>
 <dl>
     <meter value="{{goal.current}}" min="0" low="15" optimum="50" high="90" max={{goal.goal}}></meter>
 </dl>
 
-<p>{{goal.current}}</p>
-{{goal}}
+<p>You've add {{diff}} to your goal of {{goal.goal}} since you last logged in on {{lastLogin}}</p>
+<p>You only have {{remainder}} left!</p>
+
 
 {% endblock %}
