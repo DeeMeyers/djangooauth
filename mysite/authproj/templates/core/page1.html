@@ -6,7 +6,10 @@
     welcome home, cowpoke.
 </h3>
 <dl>
-    <meter value="93" min="0" low="15" optimum="50" high="90" max="100"></meter>
+    <meter value="{{goal.current}}" min="0" low="15" optimum="50" high="90" max={{goal.goal}}></meter>
 </dl>
+
+<p>{{goal.current}}</p>
+{{goal}}
 
 {% endblock %}
