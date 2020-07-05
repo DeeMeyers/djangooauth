@@ -4,6 +4,7 @@
     display: flex;
     box-sizing: border-box;
     width: 100%;
+    margin: 5rem;
 }
 
 .header{
@@ -31,3 +32,11 @@
 
 /* page1.html */
 
+.info{
+    display: flex;
+    margin: auto;
+}
+meter{
+    /* transform: rotate(-90deg); */
+    border-radius: 10px;
+}
