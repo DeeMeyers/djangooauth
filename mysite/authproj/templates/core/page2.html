@@ -1,11 +1,21 @@
 {% extends 'base.html' %}
-
+{% load static %}
+{% block meta %}
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="{% static 'js/GaugeMeter.js' %}"></script>
+<script>
+    $(document).ready(function(){
+      $(".GaugeMeter").gaugeMeter();
+    });
+</script>
+{% endblock %}
 {% block content %}
 
 <h3 class="title">
     Welcome home, cowpoke.
 </h3>
 
+<div class="GaugeMeter" id="GaugeMeter_1" data-percent="{{goal.current}}"></div>
 
 <div class="info">
     <p>You've add {{diff}} to your goal of {{goal.goal}} since you last logged in on {{lastLogin}}</p>
