@@ -5,12 +5,12 @@
 <h3 class="title">
     Welcome home, cowpoke.
 </h3>
-<dl>
+<dl class="holder">
     <meter value="{{goal.current}}" min="0" low="15" optimum="50" high="90" max={{goal.goal}}></meter>
 </dl>
-
-<p>You've add {{diff}} to your goal of {{goal.goal}} since you last logged in on {{lastLogin}}</p>
-<p>You only have {{remainder}} left!</p>
-
+<div class="info">
+    <p>You've add {{diff}} to your goal of {{goal.goal}} since you last logged in on {{lastLogin}}</p>
+    <p>You only have {{remainder}} left!</p>
+</div>
 
 {% endblock %}

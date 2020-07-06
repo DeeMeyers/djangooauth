@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block meta %}
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="{% static 'js/GaugeMeter.js' %}"></script>
+<script>
+    $(document).ready(function(){
+      $(".GaugeMeter").gaugeMeter();
+    });
+</script>
+{% endblock %}
+{% block content %}
+
+<h3 class="title">
+    Welcome home, cowpoke.
+</h3>
+<div class="holder">
+<div class="GaugeMeter" id="GaugeMeter_1" 
+    data-percent="{{percent}}"
+    data-min="0"
+    data-max="{{goal.goal}}"
+    data-width="15"
+    data-total="{{goal.goal}}"
+    data-size="300"
+    data-wdith="15"
+    data-style="Arch"
+    data-text="{{goal.current}} of {{goal.goal}}"
+    data-text_size=".12"
+    >
+</div>
+</div>
+
+<div class="info">
+    <p>You've add {{diff}} to your goal of {{goal.goal}} since you last logged in on {{lastLogin}}</p>
+    <p>You only have {{remainder}} left!</p>
+</div>
+
+{% endblock %}
