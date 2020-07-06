@@ -49,6 +49,8 @@ meter{
 	Text-Align:      Center;
 	Overflow:        Hidden;
 	Cursor:          Default;
+
+	
 }
 
 .GaugeMeter SPAN,
@@ -82,4 +84,11 @@ meter{
 	Font-Weight:     300;
 	Font-Size:       .5em;
 	Opacity:         .8;
+}
+
+/* page2.html */
+
+.holder{
+	display: flex;
+	justify-content: center;
 }
