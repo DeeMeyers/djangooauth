@@ -15,7 +15,19 @@
     Welcome home, cowpoke.
 </h3>
 
-<div class="GaugeMeter" id="GaugeMeter_1" data-percent="{{goal.current}}"></div>
+<div class="GaugeMeter" id="GaugeMeter_1" 
+    data-percent="{{percent}}"
+    data-min="0"
+    data-max="{{goal.goal}}"
+    data-width="15"
+    data-total="{{goal.goal}}"
+    data-size="300"
+    data-wdith="15"
+    data-style="Arch"
+    data-text="{{goal.current}} of {{goal.goal}}"
+    data-text_size=".12"
+    >
+</div>
 
 <div class="info">
     <p>You've add {{diff}} to your goal of {{goal.goal}} since you last logged in on {{lastLogin}}</p>

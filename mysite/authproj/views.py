@@ -19,5 +19,6 @@ def userpage2(request):
     diff = goal.current - goal.previous
     remainder = goal.goal - goal.current
     lastLogin = User.objects.get(username=request.user).last_login
+    percent = round((goal.current/goal.goal)*100)
     
-    return render(request, 'core/page2.html', {'goal': goal, 'diff': diff, 'lastLogin': lastLogin, 'remainder': remainder})
+    return render(request, 'core/page2.html', {'goal': goal, 'diff': diff, 'lastLogin': lastLogin, 'remainder': remainder, 'percent': percent})
