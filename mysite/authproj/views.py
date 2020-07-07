@@ -4,7 +4,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 from .models import Goal, User
-from .serializer import status
+from .serializers import GoalSerializer
 
 
 def index(request):
@@ -30,7 +30,7 @@ def userpage2(request):
 @api_view(['GET', 'DELETE', 'PUT'])
 def get_delete_update_goal(request, pk):
     try:
-        goal = Goal.object.get(pk=pk)
+        goal = Goal.objects.get(pk=pk)
     except Goal.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
     
@@ -43,7 +43,9 @@ def get_delete_update_goal(request, pk):
 
 @api_view(['GET', 'POST'])
 def get_post_goal(request):
-    elif request.method == 'GET':
-        return Response({})
+    if request.method == 'GET':
+        goals = Goal.objects.all()
+        serializer = GoalSerializer(goals, many=True)
+        return Response(serializer.data)
     elif request.method == 'POST':
         return Response({})
