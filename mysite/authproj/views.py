@@ -35,11 +35,16 @@ def get_delete_update_goal(request, pk):
         return Response(status=status.HTTP_404_NOT_FOUND)
     
     if request.method == 'GET':
-        return Response({})
+        serializer = GoalSerializer(goal)
+        return Response(serializer.data)
     elif request.method == 'DELETE':
         return Response({})
     elif request.method == 'PUT':
-        return Response({})
+        serializer = GoalSerializer(goal, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_204_NO_CONTENT)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET', 'POST'])
 def get_post_goal(request):
@@ -48,4 +53,4 @@ def get_post_goal(request):
         serializer = GoalSerializer(goals, many=True)
         return Response(serializer.data)
     elif request.method == 'POST':
-        return Response({})
+        return Response({})     
