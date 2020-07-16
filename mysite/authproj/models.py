@@ -9,3 +9,5 @@ class Goal(models.Model):
     goal = models.IntegerField(blank=True, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
     
+    def test(self):
+        return self.current,self.previous,self.goal

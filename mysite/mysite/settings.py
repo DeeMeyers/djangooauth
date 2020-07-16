@@ -45,6 +45,10 @@ INSTALLED_APPS = [
     #mine
     'authproj',
 
+    #extra
+    'rest_framework',
+
+
     
 ]
 
@@ -141,3 +145,11 @@ LOGIN_REDIRECT_URL = '/home/'
 LOGIN_URL = '/accounts/login/'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # send emails to term
 
+#REST Framework Settings
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [],
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json'
+}

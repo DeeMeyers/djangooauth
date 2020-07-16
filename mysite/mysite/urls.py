@@ -21,6 +21,7 @@ urlpatterns = [
     path('', include('authproj.urls')),
     path('accounts/', include('registration.backends.simple.urls')),
     path('admin/', admin.site.urls),
+    
 
 
 ]
