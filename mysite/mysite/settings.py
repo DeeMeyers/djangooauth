@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
     #mine
     'authproj',
+    'mysite',
 
     #extra
     'rest_framework',
